@@ -57,6 +57,5 @@ if usuario=="q":
 
 
 PROBABILIDADES NO PARECEN FUNCIONAR CORRECTAMENTE
-prueba prueba
-pruebon del copon
+
 """
