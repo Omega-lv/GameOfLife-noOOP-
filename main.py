@@ -165,4 +165,84 @@ while contador_inicial<filas-2:
 
 POSIBILIDAD, HACER UNA FUNCION QUE SE LLAME CONTADOR DE VIVOS O ALGO ASI QUE AGLUTINE LOS IFS CONJUNTOS QUE TENEMOS REPETIDOS DOS VECES
 PA VER SI SANEAMOS UN POCO ESE CACHO DE CODIGO
+
+
+
+if contadorFilas==0:
+    if contadorColumnas==0:
+        if mapa[contadorFilas][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas+1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas+1][contadorColumnas+1]==1:
+        contadorVivos=contadorVivos+1
+    if contadorColumnas==columnas-1:
+        if mapa[contadorFilas][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas+1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas+1][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+    else:
+        if mapa[contadorFilas][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas+1][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas+1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas+1][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+if contadorFilas==filas-1:
+    if contadorColumnas==0:
+        if mapa[contadorFilas-1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas-1][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas][contadorColumnas+1]==1:
+        contadorVivos=contadorVivos+1
+    if contadorColumnas==columnas-1:
+        if mapa[contadorFilas][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas-1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas-1][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+    else:
+        if mapa[contadorFilas][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas-1][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas-1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+        if mapa[contadorFilas-1][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+if contadorColumnas==0:
+    if mapa[contadorFilas-1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+    if mapa[contadorFilas-1][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+    if mapa[contadorFilas][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+    if mapa[contadorFilas+1][contadorColumnas+1]==1:
+            contadorVivos=contadorVivos+1
+    if mapa[contadorFilas+1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+if contadorColumnas==columnas-1:
+    if mapa[contadorFilas-1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+    if mapa[contadorFilas-1][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+    if mapa[contadorFilas][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+    if mapa[contadorFilas+1][contadorColumnas]==1:
+            contadorVivos=contadorVivos+1
+    if mapa[contadorFilas+1][contadorColumnas-1]==1:
+            contadorVivos=contadorVivos+1
+
+
+
 """
