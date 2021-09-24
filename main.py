@@ -175,7 +175,7 @@ if contadorFilas==0:
         if mapa[contadorFilas+1][contadorColumnas]==1:
             contadorVivos=contadorVivos+1
         if mapa[contadorFilas+1][contadorColumnas+1]==1:
-        contadorVivos=contadorVivos+1
+            contadorVivos=contadorVivos+1
     if contadorColumnas==columnas-1:
         if mapa[contadorFilas][contadorColumnas-1]==1:
             contadorVivos=contadorVivos+1
@@ -201,7 +201,7 @@ if contadorFilas==filas-1:
         if mapa[contadorFilas-1][contadorColumnas+1]==1:
             contadorVivos=contadorVivos+1
         if mapa[contadorFilas][contadorColumnas+1]==1:
-        contadorVivos=contadorVivos+1
+            contadorVivos=contadorVivos+1
     if contadorColumnas==columnas-1:
         if mapa[contadorFilas][contadorColumnas-1]==1:
             contadorVivos=contadorVivos+1
@@ -222,26 +222,26 @@ if contadorFilas==filas-1:
             contadorVivos=contadorVivos+1
 if contadorColumnas==0:
     if mapa[contadorFilas-1][contadorColumnas]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
     if mapa[contadorFilas-1][contadorColumnas+1]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
     if mapa[contadorFilas][contadorColumnas+1]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
     if mapa[contadorFilas+1][contadorColumnas+1]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
     if mapa[contadorFilas+1][contadorColumnas]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
 if contadorColumnas==columnas-1:
     if mapa[contadorFilas-1][contadorColumnas]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
     if mapa[contadorFilas-1][contadorColumnas-1]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
     if mapa[contadorFilas][contadorColumnas-1]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
     if mapa[contadorFilas+1][contadorColumnas]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
     if mapa[contadorFilas+1][contadorColumnas-1]==1:
-            contadorVivos=contadorVivos+1
+        contadorVivos=contadorVivos+1
 
 
 
