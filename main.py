@@ -48,71 +48,73 @@ def cuantosVivientes (mapa, contadorFilas, contadorColumnas):
                 contadorinVivos=contadorinVivos+1
             if mapa[contadorFilas+1][contadorColumnas+1]==1:
                 contadorinVivos=contadorinVivos+1
-    if contadorFilas==filas-1:
-        if contadorColumnas==0:
-            if mapa[contadorFilas-1][contadorColumnas]==1:
-                contadorinVivos=contadorinVivos+1
-            if mapa[contadorFilas-1][contadorColumnas+1]==1:
-                contadorinVivos=contadorinVivos+1
-            if mapa[contadorFilas][contadorColumnas+1]==1:
-                contadorinVivos=contadorinVivos+1
-        if contadorColumnas==columnas-1:
-            if mapa[contadorFilas][contadorColumnas-1]==1:
-                contadorinVivos=contadorinVivos+1
-            if mapa[contadorFilas-1][contadorColumnas]==1:
-                contadorinVivos=contadorinVivos+1
-            if mapa[contadorFilas-1][contadorColumnas-1]==1:
-                contadorinVivos=contadorinVivos+1
-        else:
-            if mapa[contadorFilas][contadorColumnas-1]==1:
-                contadorinVivos=contadorinVivos+1
-            if mapa[contadorFilas][contadorColumnas+1]==1:
-                contadorinVivos=contadorinVivos+1
-            if mapa[contadorFilas-1][contadorColumnas-1]==1:
-                contadorinVivos=contadorinVivos+1
-            if mapa[contadorFilas-1][contadorColumnas]==1:
-                contadorinVivos=contadorinVivos+1
-            if mapa[contadorFilas-1][contadorColumnas+1]==1:
-                contadorinVivos=contadorinVivos+1
-    if contadorColumnas==0:
-        if mapa[contadorFilas-1][contadorColumnas]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas-1][contadorColumnas+1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas][contadorColumnas+1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas+1][contadorColumnas+1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas+1][contadorColumnas]==1:
-            contadorinVivos=contadorinVivos+1
-    if contadorColumnas==columnas-1:
-        if mapa[contadorFilas-1][contadorColumnas]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas-1][contadorColumnas-1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas][contadorColumnas-1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas+1][contadorColumnas]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas+1][contadorColumnas-1]==1:
-            contadorinVivos=contadorinVivos+1
     else:
-        if mapa[contadorFilas-1][contadorColumnas-1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas-1][contadorColumnas]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas-1][contadorColumnas+1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas][contadorColumnas-1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas][contadorColumnas+1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas+1][contadorColumnas-1]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas+1][contadorColumnas]==1:
-            contadorinVivos=contadorinVivos+1
-        if mapa[contadorFilas-1][contadorColumnas+1]==1:
-            contadorinVivos=contadorinVivos+1
+        if contadorFilas==filas-1:
+            if contadorColumnas==0:
+                if mapa[contadorFilas-1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+            if contadorColumnas==columnas-1:
+                if mapa[contadorFilas][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+            else:
+                if mapa[contadorFilas][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+        else:
+            if contadorColumnas==0:
+                if mapa[contadorFilas-1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas+1][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas+1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+            if contadorColumnas==columnas-1:
+                if mapa[contadorFilas-1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas+1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas+1][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+            else:
+                if mapa[contadorFilas-1][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas+1][contadorColumnas-1]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas+1][contadorColumnas]==1:
+                    contadorinVivos=contadorinVivos+1
+                if mapa[contadorFilas-1][contadorColumnas+1]==1:
+                    contadorinVivos=contadorinVivos+1
     return contadorinVivos
 
 
@@ -146,10 +148,11 @@ def pasador(mapa, mapa_apoyo, filas, columnas):
     contadorceteFilas=0
     contadorceteColumnas=0
     while contadorceteFilas<filas:
+        contadorceteColumnas=0
         while contadorceteColumnas<columnas:
             mapa[contadorceteFilas][contadorceteColumnas]=mapa_apoyo[contadorceteFilas][contadorceteColumnas]
             contadorceteColumnas=contadorceteColumnas+1
-    contadorceteFilas=contadorceteFilas+1
+        contadorceteFilas=contadorceteFilas+1
 
 
 seed(1)
@@ -210,6 +213,7 @@ if usuario=="q":
 contadorFilas=0
 contadorColumnas=0
 while contadorFilas<filas:
+    contadorColumnas=0
     while contadorColumnas<columnas:
         if mapa[contadorFilas][contadorColumnas]==1:
             analisis_celula_viva(mapa,mapa_apoyo,contadorFilas,contadorColumnas)
@@ -217,6 +221,7 @@ while contadorFilas<filas:
             analisis_celula_muerta(mapa,mapa_apoyo,contadorFilas,contadorColumnas)
         contadorColumnas=contadorColumnas+1
     contadorFilas=contadorFilas+1
+
 
 #PASAMOS DATOS DE EL MAPA DE APOYO AL MAPA BASE
 pasador(mapa, mapa_apoyo, filas, columnas)
