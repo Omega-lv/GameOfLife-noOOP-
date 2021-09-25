@@ -1,4 +1,6 @@
 from random import *
+import numpy as np
+import PySimpleGUI as sg
 
 """
 import numpy as np
@@ -244,8 +246,5 @@ while contador_inicial<filas-2:
     mapa=mapa+[array_apoyo]
     contador_inicial=contador_inicial+1
 
-
-POSIBILIDAD, HACER UNA FUNCION QUE SE LLAME CONTADOR DE VIVOS O ALGO ASI QUE AGLUTINE LOS IFS CONJUNTOS QUE TENEMOS REPETIDOS DOS VECES
-PA VER SI SANEAMOS UN POCO ESE CACHO DE CODIGO
 
 """
