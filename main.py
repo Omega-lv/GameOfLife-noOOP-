@@ -200,33 +200,34 @@ while contadorFilas<filas:
 print("El mapa inicial")
 plotea_mapas(mapa)
 
+while(True):
 
-#PASO A LA SIGUIENTE RONDA
-usuario=input("Introduzca 'n' para ver la siguiente generación o 'q' para finalizar el programa: ")
-if usuario=="q":
-    exit()
+    #PASO A LA SIGUIENTE RONDA
+    usuario=input("Introduzca 'n' para ver la siguiente generación o 'q' para finalizar el programa: ")
+    if usuario=="q":
+        exit()
 
-#toca ahora ver como calculamos la siguiente generacion
-#quiza definir un metodo que lo calcule sea lo más cómodo
-#leete las reglas del juego tamien
+    #toca ahora ver como calculamos la siguiente generacion
+    #quiza definir un metodo que lo calcule sea lo más cómodo
+    #leete las reglas del juego tamien
 
-contadorFilas=0
-contadorColumnas=0
-while contadorFilas<filas:
+    contadorFilas=0
     contadorColumnas=0
-    while contadorColumnas<columnas:
-        if mapa[contadorFilas][contadorColumnas]==1:
-            analisis_celula_viva(mapa,mapa_apoyo,contadorFilas,contadorColumnas)
-        else: 
-            analisis_celula_muerta(mapa,mapa_apoyo,contadorFilas,contadorColumnas)
-        contadorColumnas=contadorColumnas+1
-    contadorFilas=contadorFilas+1
+    while contadorFilas<filas:
+        contadorColumnas=0
+        while contadorColumnas<columnas:
+            if mapa[contadorFilas][contadorColumnas]==1:
+                analisis_celula_viva(mapa,mapa_apoyo,contadorFilas,contadorColumnas)
+            else: 
+                analisis_celula_muerta(mapa,mapa_apoyo,contadorFilas,contadorColumnas)
+            contadorColumnas=contadorColumnas+1
+        contadorFilas=contadorFilas+1
 
 
-#PASAMOS DATOS DE EL MAPA DE APOYO AL MAPA BASE
-pasador(mapa, mapa_apoyo, filas, columnas)
+    #PASAMOS DATOS DE EL MAPA DE APOYO AL MAPA BASE
+    pasador(mapa, mapa_apoyo, filas, columnas)
 
-plotea_mapas(mapa)
+    plotea_mapas(mapa)
 
 
 
