@@ -8,7 +8,7 @@ import numpy as np
 
 #FUNCION ENCARGADA DE IMPRIMRIR POR PANTALLA EL MAPA CON CELULAS VIVAS Y MUERTAS
 #SE LE PASA COMO PARAMETRO UNA MATRIZ
-def plotea_mapas(mapa):
+def plotea_mapas(mapa, filas, columnas):
     contadorFilas=0
     contadorColumnas=0
     while contadorFilas<filas:
@@ -19,6 +19,20 @@ def plotea_mapas(mapa):
             print(" ", end='')
         print("\n")
         contadorFilas=contadorFilas+1
+
+def mapa_to_string(mapa, filas, columnas):
+    stringcito=""
+    contadorFilas=0
+    contadorColumnas=0
+    while contadorFilas<filas:
+        contadorColumnas=0
+        while contadorColumnas<columnas:
+            stringcito=stringcito+(str(mapa[contadorFilas][contadorColumnas]))
+            contadorColumnas=contadorColumnas+1
+            stringcito=stringcito+(" ")
+        stringcito=stringcito+("\n")
+        contadorFilas=contadorFilas+1
+    return stringcito
 
 
 #FUNCION ENCARGADA DE ANALIZAR SITUACION ALREDEDOR DE LA CELULA Y SUMAR CUANTOS VIVOS HAY
@@ -181,9 +195,6 @@ filas=3
 
 
 
-
-plotea_mapas(mapa)
-
 """
 #GENERAMOS MAPA INICIAL
 while contadorFilas<filas:
@@ -198,9 +209,23 @@ while contadorFilas<filas:
     contadorFilas=contadorFilas+1
 """
 
-#PINTAMOS EL MAPA INICIAL
-print("El mapa inicial")
-plotea_mapas(mapa)
+
+#PINTAMOS MAPA INICIAL
+plotea_mapas(mapa, filas, columnas)
+mapa_string=mapa_to_string(mapa, filas, columnas)
+
+layout = [[sg.Multiline(default_text=mapa_string, auto_size_text=True, enable_events=True, auto_refresh=True)], [sg.Button("OK")]]
+window=sg.Window("Demo",layout)
+
+while True:
+    event, values = window.read()
+    # End program if user closes window or
+    # presses the OK button
+    if event == "OK" or event == sg.WIN_CLOSED:
+        break
+
+window.close()
+
 
 while(True):
 
@@ -229,7 +254,18 @@ while(True):
     #PASAMOS DATOS DE EL MAPA DE APOYO AL MAPA BASE
     pasador(mapa, mapa_apoyo, filas, columnas)
 
-    plotea_mapas(mapa)
+    plotea_mapas(mapa, filas, columnas)
+    mapa_string=mapa_to_string(mapa, filas, columnas)
+
+    while True:
+        event, values = window.read()
+        print("El codigo pasa de aqui")
+        # End program if user closes window or
+        # presses the OK button
+        if event == "OK" or event == sg.WIN_CLOSED:
+            break
+
+    window.close()
 
 
 
