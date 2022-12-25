@@ -36,6 +36,7 @@ def mapa_to_string(mapa, filas, columnas):
 
 
 #FUNCION ENCARGADA DE ANALIZAR SITUACION ALREDEDOR DE LA CELULA Y SUMAR CUANTOS VIVOS HAY
+#HAY QUE CAMBIAR ESTO PORQUE PAREZCO TONTO
 def cuantosVivientes (mapa, contadorFilas, contadorColumnas):
     contadorinVivos=0
     if contadorFilas==0:
