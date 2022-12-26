@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 
-void printea_matriz(int** matriz, int tamaño){
+void printea_matriz(int** matriz, int size){
 
     int i;
     int j;
-    for (i=0; i<tamaño; i++){
+    for (i=0; i<size; i++){
         printf("|");
-        for (j=0; j<tamaño; j++){
+        for (j=0; j<size; j++){
             printf(" %d |", matriz[i][j]);
         }
         printf("\n");
@@ -53,8 +53,8 @@ int main() {
    //comienza ejecucion del programa
    //preguntamos al man que tamaño de matriz quiere
 
-   int tamaño_matriz;
-   int i;
+   int size_matriz=0;
+   int i=0;
    
 
    /* descomentar cuando hayamos perfeccionado el método de entrada
@@ -64,20 +64,20 @@ int main() {
 
    */
 
-    tamaño_matriz=10;
+    size_matriz=10;
     //podríamos plantearnos almacenar las matrices en row_major o column_major pero 
     //creo que haré una versión normal y una intentando optimizar por estudiar diferencias de rendimiento en programas random
     //anyways, de momento, se reserva el vector de la fila, y luego en cada posición, se reserva otro vector para las columnas
     //se hace comprobación de errores también
-    int **Matriz_visible = (int*)calloc(tamaño_matriz, sizeof(int));
-    int **Matriz_apoyo = (int*)calloc(tamaño_matriz, sizeof(int));
-    if (Matriz_apoyo || Matriz_visible == NULL){
+    int **Matriz_visible = (int **) calloc(size_matriz, sizeof(int *));
+    int **Matriz_apoyo = (int **) calloc(size_matriz, sizeof(int *));
+    if (Matriz_apoyo == NULL || Matriz_visible == NULL){
         printf("Peto reservando las filas");
         return 1;
     }
 
-    for (i=0; i<tamaño_matriz; i++){
-        Matriz_visible[i]=(int *)calloc(tamaño_matriz,sizeof(int));
+    for (i=0; i<size_matriz; i++){
+        Matriz_visible[i]=(int *)calloc(size_matriz,sizeof(int));
         if (Matriz_visible[i]==NULL){
             printf("Peto reservando las columnas");
             return 1;
@@ -98,14 +98,14 @@ int main() {
     Matriz_visible[5][3]=1;
 
     //printeamos por consola de momento para ver que todo funciona correctamente
-    printea_matriz(Matriz_visible, tamaño_matriz);
+    printea_matriz(Matriz_visible, size_matriz);
 
 
     //liberamos la memoria de las matrices
     //de nuevo, cuando el futuro cambiemos a row-major o lo que sea habrá que alterar esto
-    for (i=0; i < tamaño_matriz; i++){
-        free(Matriz_apoyo[I]);
-        free(Matriz_visible[I]);
+    for (i=0; i < size_matriz; i++){
+        free(Matriz_apoyo[i]);
+        free(Matriz_visible[i]);
     }
 
     free(Matriz_apoyo);
